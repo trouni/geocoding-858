@@ -1,0 +1,8 @@
+<%= link_to 'New Flat', new_flat_path, class: 'btn btn-primary' %>
+<div style="width: 100%; height: 600px;"
+  data-controller="mapbox"
+  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+  data-mapbox-markers-value="<%= @markers.to_json %>"
+  <%# data-mapbox-any-name-here-value="Some value" %>
+  <%# data-<controller-name>-<value-name>-value %>
+></div>
