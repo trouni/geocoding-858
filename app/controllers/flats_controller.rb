@@ -8,7 +8,9 @@ class FlatsController < ApplicationController
     @markers = @flats.map do |flat|
       {
         lat: flat.latitude,
-        lng: flat.longitude
+        lng: flat.longitude,
+        info_window: render_to_string(partial: 'flats/info_window', locals: { flat: flat }),
+        custom_marker: render_to_string(partial: 'flats/marker', locals: { flat: flat }),
       }
     end
   end
